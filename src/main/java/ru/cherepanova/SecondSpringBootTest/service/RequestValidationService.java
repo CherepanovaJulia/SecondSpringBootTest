@@ -19,7 +19,7 @@ public class RequestValidationService implements ValidationService {
     }
     @Override
     public void isCodeValid(Request request) throws UnknownError {
-        if (!request.setUid()) {
+        if (!request.isUidValid()) {
             throw new UnknownError("uid не может быть равен 123");
         }
     }
